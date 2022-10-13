@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles\styles.css">
   <script type="text/javascript" src="snackbar.js"></script>
   <script type="text/javascript" src="togglepassword.js"></script>
+  <script type="text/javascript" src="validations.js"></script>
 
 </head>
 
@@ -19,12 +20,12 @@
     <div class="grid-item-left"></div>
     <div class="grid-item-right">
       <div class="flex-container">
-        <img onclick="snack()" src="assets\images\logo.svg" class="logo">
-        <form action="">
+        <img onclick="snack('Lorem ipsum dolor sit amet.')" src="assets\images\logo.svg" class="logo"> 
+        <form name="connection-form" action="" onsubmit="return validations()">
           <div class="align-left">
             <div id="snack" class="snackbar">
               <img src="assets\images\attention.svg">
-              <span class="snack-text">Lorem ipsum dolor sit amet.</span>
+              <span id="snack-text" class="snack-text">Lorem ipsum dolor sit amet.</span>
             </div>
             <h2 class="white-text">Connexion</h2>
             <span class="subtext white-text">Les champs marqués d'une <span class="pink-text">*</span> sont
@@ -36,15 +37,15 @@
             <div class="container-eye">
               <input class="input-text" type="password" id="password" name="password" placeholder="Mot de passe"
                 required="">
-              <img onclick="togglepassword()" id="pw-eye-open" class="password-toggle pw-eye"
+              <img onclick="togglepassword()" id="pw-eye-open" class="pw-eye"
                 src="assets\images\password1.svg">
-              <img onclick="togglepassword()" id="pw-eye-closed" class="password-toggle pw-eye"
+              <img onclick="togglepassword()" id="pw-eye-closed" class="pw-eye"
                 src="assets\images\password2.svg">
             </div>
 
             <div class="align-right">
               <a href="" class="white-text lostpassword">Vous n'avez pas encore de compte ?</a>
-              <input type="submit" class="pink-button" value="Connexion" />
+              <input type="submit" class="pink-button" value="Connexion"  />
             </div>
           </div>
         </form>
