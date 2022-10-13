@@ -1,0 +1,187 @@
+@import url(fonts.css);
+
+/* colors */
+.white-text {
+    color: #FFF;
+}
+
+.white-background {
+    background-color: #FFF;
+}
+
+.pink-text {
+    color: #F063A7;
+}
+
+.pink-background {
+    background-color: #F063A7;
+}
+
+/* elements */
+h2 {
+    font-family: Catamaran;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+label {
+    font-family: Catamaran;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5px;
+    /* margin-top: 20px; */
+}
+
+a {
+    font-family: Oswald;
+    font-size: 12px;
+}
+
+button,
+input[type=submit] {
+    border-radius: 4px;
+    font-family: Oswald;
+    font-size: 16px;
+    border: none;
+    height: 45px;
+    width: 107px;
+}
+
+.pink-button {
+    background-color: #F063A7;
+    color: #FFF;
+}
+
+.pink-button:hover {
+    background-color: #FFF;
+    color: #19284A;
+}
+
+/* classes */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100vh;
+}
+
+.grid-item-left {
+    background: linear-gradient(rgba(25, 40, 74, 0.45),
+            rgba(25, 40, 74, 0.45)), url(../assets/images/montagne.jpg)no-repeat;
+    background-size: cover;
+}
+
+.grid-item-right {
+    background: #19284A;
+    display: grid;
+    grid-template-rows: 9fr 1fr;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1 / 3;
+    grid-column: 1/2;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 10vh;
+}
+
+.bottom-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 15px;
+    margin-bottom: 17px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.subtext {
+    font-family: Oswald;
+    font-size: 8px;
+    font-weight: 300;
+}
+
+.input-text {
+    font-family: Oswald;
+    font-size: 16px;
+    color: #19284A;
+    height: 45px;
+    width: 330px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 18px;
+    border: none;
+}
+
+.input-text::placeholder {
+    color: #C2CADD;
+}
+
+.align-left {
+    flex-direction: column;
+    display: flex;
+    justify-content: left;
+}
+
+.align-right {
+    flex-direction: row;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.line {
+    width: 215px;
+    margin-top: 13px;
+    margin-bottom: 24px;
+}
+
+.lostpassword {
+    margin: 12px;
+}
+
+.snackbar {
+    display: none;
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 40px;
+    color: #FFF;
+    width: 100%;
+    background-color: #F063A7;
+    border-radius: 4px;
+    margin-bottom: 32px;
+    height: 40px;
+    padding: 11px;
+    align-items: center;
+}
+
+.snack-text {
+    padding-left: 11px;
+}
+
+.password-toggle {
+    height: 18px;
+}
+
+.container-eye {
+position: relative
+}
+
+.pw-eye {
+position: absolute;
+right : 18px;
+top: 13px;
+} 
+
+/* .bottom-right{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
