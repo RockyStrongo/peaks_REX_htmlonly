@@ -1,0 +1,23 @@
+label,
+input,
+textarea {
+    display: block;
+}
+
+input,
+textarea {
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+label {
+    font-family: Catamaran;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.connection-form {
+    color: #fff;
+}

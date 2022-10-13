@@ -1,3 +1,4 @@
+
 function validations () {
     let email = document.forms["connection-form"]["login"].value
     let password = document.forms["connection-form"]["password"].value

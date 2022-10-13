@@ -2,60 +2,81 @@
 <html lang="en">
 
 <head>
+  <title>Login</title>
+  <!-- Metas -->
   <meta name="description" content="Webpage description goes here" />
   <meta charset="utf-8">
-  <title>Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="">
+  
+  <!-- styles -->
   <link rel="stylesheet" href="styles\reset.css">
   <link rel="stylesheet" href="styles\styles.css">
-  <script type="text/javascript" src="snackbar.js"></script>
-  <script type="text/javascript" src="togglepassword.js"></script>
-  <script type="text/javascript" src="validations.js"></script>
+  <link rel="stylesheet" href="styles\form.css">
+  <link rel="stylesheet" href="styles\button.css">
 
 </head>
 
 <body>
-  <div class="grid-container">
-    <div class="grid-item-left"></div>
-    <div class="grid-item-right">
-      <div class="flex-container">
-        <img onclick="snack('Lorem ipsum dolor sit amet.')" src="assets\images\logo.svg" class="logo"> 
-        <form name="connection-form" action="" onsubmit="return validations()">
-          <div class="align-left">
-            <div id="snack" class="snackbar">
-              <img src="assets\images\attention.svg">
-              <span id="snack-text" class="snack-text">Lorem ipsum dolor sit amet.</span>
-            </div>
-            <h2 class="white-text">Connexion</h2>
-            <span class="subtext white-text">Les champs marqués d'une <span class="pink-text">*</span> sont
-              obligatoires</span>
-            <hr class="line">
-            <label class="white-text" for="login">Login : <span class="pink-text">*</span></label>
-            <input class="input-text" type="email" id="login" name="login" placeholder="Email" required="">
-            <label class=" white-text" for="password">Mot de passe : <span class="pink-text">*</span></label>
-            <div class="container-eye">
-              <input class="input-text" type="password" id="password" name="password" placeholder="Mot de passe"
-                required="">
-              <img onclick="togglepassword()" id="pw-eye-open" class="pw-eye"
-                src="assets\images\password1.svg">
-              <img onclick="togglepassword()" id="pw-eye-closed" class="pw-eye"
-                src="assets\images\password2.svg">
-            </div>
 
-            <div class="align-right">
-              <a href="" class="white-text lostpassword">Vous n'avez pas encore de compte ?</a>
-              <input type="submit" class="pink-button" value="Connexion"  />
-            </div>
+  <div class="grid-container">
+
+    <!-- left column -->
+    <div class="grid-item-left"></div>
+    
+    <!-- right column -->
+    <div class="grid-item-right">
+
+      <div class="flex-container">
+        <img class="logo" src="assets\images\logo.svg" alt="Logo peaks" title="Logo peaks"> 
+
+        <form class="connection-form" name="connection-form" action="" onsubmit="validations()" data-form-connection>
+
+          <!-- Snackbar -->
+          <div class="snackbar" data-snack aria-hidden="true">
+            <img src="assets\images\attention.svg">
+            <span class="snack-text" data-snack-text>Lorem ipsum dolor sit amet.</span>
           </div>
+
+          <!-- title section -->
+          <h2>Connexion</h2>
+          <span class="subtext ">Les champs marqués d'une <span class="pink-text">*</span> sont
+            obligatoires</span>
+          <hr class="line">
+
+          <!-- login -->
+          <label for="login">Login : <span class="pink-text">*</span></label>
+          <input class="input-text" type="email" id="login" name="login" placeholder="Email" required="">
+
+          <!-- Password -->
+          <label for="password">Mot de passe : <span class="pink-text">*</span></label>
+          <div class="container-eye">
+            <input class="input-text" type="password" id="password" name="password" placeholder="Mot de passe"
+              required data-input-password>
+            <img class="pw-eye" src="assets\images\password1.svg" data-eye="open" aria-hidden="false">
+            <img class="pw-eye" src="assets\images\password2.svg" data-eye="close" aria-hidden="true">
+          </div>
+
+          <div class="align-right">
+            <a href="" class="link link--small lostpassword">Vous n'avez pas encore de compte ?</a>
+            <input type="submit" class="Button Button--pink pink-button" value="Connexion"  />
+          </div>
+
         </form>
+
       </div>
+
+      <!-- Recover password link -->
       <div class="bottom-right">
-        <a href="" class="white-text">Vous avez perdu votre mot de passe ?</a>
+        <a href="/" class="link link--small">Vous avez perdu votre mot de passe ?</a>
       </div>
+
     </div>
   </div>
 
+  <script type="text/javascript" src="js/snackbar.js"></script>
+  <script type="text/javascript" src="js/togglePassword.js"></script>
+  <script type="text/javascript" src="js/formValidation.js"></script>
 </body>
 
 </html>
