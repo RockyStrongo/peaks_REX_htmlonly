@@ -31,7 +31,7 @@ const validation = (e) => {
     }
     else
         connectionForm.submit()
-
+ 
 }
 
 function emailIsValid(email) {
